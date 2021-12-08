@@ -1,13 +1,26 @@
 # Kanban Board created in GitKraken
-Write-Host "I or we are going to make flashcards to help my son learn spelling words"
 
-# Step 1 - Import Data
+# Load function "new-speech" for audible
+
+new-speech -text "Hello, what is your name?" 
+new-speech -notext "Hello, what is your name?" 
+
+$name = Read-Host "Hello, what is your name?" 
 
 
+new-speech -text $name = Read-Host "Hello, what is your name?"
 
-# https://adamtheautomator.com/read-host/
-# prompt user for string value = read-host
-# powershell prompt user for input
+
+Write-Output "Nice to meet you $name, let's spell some words together!"
+
+# Load spelling words from text file
+$words = get-content 'SampleWords.txt'
+new-speech 
+foreach ($word in $words) {
+    Read-host -Prompt 
+}
+
+new-speech -text "This is a test"
 
 
 $word = Read-Host -prompt 'Spell'
