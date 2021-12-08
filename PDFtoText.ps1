@@ -1,4 +1,6 @@
-# PDF list to text or usable format
+# PDF is complex, try to get to Import-CSV or .txt file
+# search pdf text extractor; lots of options online   https://pdftotext.com/ worked well
+
 
 
 # Parse PDF file for word list, I'm guessing will put into an array later
@@ -12,8 +14,6 @@ for ($page = 1; $page -le $reader.NumberOfPages; $page++)
     $currentText = [iTextSharp.text.pdf.parser.PdfTextExtractor]::GetTextFromPage($reader, $page, $strategy);
     [string[]]$Text += [system.text.Encoding]::UTF8.GetString([System.Text.ASCIIEncoding]::Convert( [system.text.encoding]::default, [system.text.encoding]::UTF8, [system.text.Encoding]::Default.GetBytes($currentText)));
 }
-
-# pdf text extractor; lots of options online   https://pdftotext.com/ to .txt file
 
 # Search pdf text extractor powershell = https://stackoverflow.com/questions/15684699/how-to-parse-pdf-content-to-database-with-powershell
 
