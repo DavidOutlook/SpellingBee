@@ -1,4 +1,4 @@
-# to make an array; get-content and point to feline
+# to make an array; get-content and point to file path
 $words = get-content 'SpellingBeeList.txt'
 
 # Chunk down this list into 50 words, save in multiple files.  List1, List2, etc
