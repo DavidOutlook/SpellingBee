@@ -1,5 +1,3 @@
-.txt
-
 Original idea - Dec 8 2021 @ 4am, Spelling Bee Flashcards, using SpeechSynth
 
 Additional Features
