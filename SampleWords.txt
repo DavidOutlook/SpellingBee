@@ -1,6 +1,5 @@
+cat
+dog
+fish
 
-$words = get-content 'SpellingBeeList.txt'
 
-mask
-gift
-mess

@@ -18,7 +18,27 @@ $list = Get-Content -Path .\SampleWords.txt
 
 foreach ($word in $list) {
     new-speech $word
-    $userinput = Read-host -Prompt "Type the spelling of the word here"  # added variable $userinput
+    
+    # Keeps on looping this until break is called
+    # Technically you could also do a do while or do until loop but I prefer the explicit break
+    # Really just personal preference
+    while ($true) {
+        # Prompt the user for the input
+        $userinput = Read-host -Prompt "Type the spelling of the word here"  # added variable $userinput
+        
+        # Check whether it matches - not sure if you want -eq here though
+        if ($userinput -match $word) {
+            # Was correct, call break to exit the while loop and continue on the foreach $word list
+            Write-Host "Correct"
+            break
+        }
+        else {
+            # Was incorrect, display Try Again and then restarts the loop with the prompt
+            Write-Host "Try Again!"
+        }
+    }
+    
+    
 
         do 
         {

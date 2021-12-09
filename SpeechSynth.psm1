@@ -27,4 +27,4 @@ function new-speech {
  
 }
 
-new-speech -text "This is a test"
+#new-speech -text "This is a test"
