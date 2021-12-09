@@ -1,6 +1,9 @@
-# PDF is complex, try to get to Import-CSV or .txt file
-# search pdf text extractor; lots of options online   https://pdftotext.com/ worked well
+# PDF is complex, try to get to Import-CSV or .txt file for Get-Content
+# search pdf text extractor; lots of options online   
+https://pdftotext.com/ worked well
+then use Get-Content to read text and store into an array
 
+----------------------------------------------------------------
 
 
 # Parse PDF file for word list, I'm guessing will put into an array later

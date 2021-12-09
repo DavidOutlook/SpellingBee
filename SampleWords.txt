@@ -1,6 +1,6 @@
 cat
 dog
 fish
-Red
+
 
 
