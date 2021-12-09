@@ -1,0 +1,51 @@
+.txt
+
+Original idea - Dec 8 2021 @ 4am, Spelling Bee Flashcards, using SpeechSynth
+
+Additional Features
+
+
+After 3 incorrect attempts, Write-host the correct spelling and BREAK or CONTINUE loop
+
+Option to repeat the word
+Automatically repeat word if $false
+
+When loop finished, say and write "Great Practice!  Thanks for spelling with me $name"
+
+Show words at end that were not spelled correctly on 1st attempt for extra Practice
+
+Score: Show % of correctly spelled words on 1st attempt
+
+
+ADVANCED Features
+
+Ask user how many words they would like to spell.. ex 10,20,50 and then pull that many from get-content of 1 large file
+Conversely, Break Word chunks by difficulty or mix easy, medium, hard
+ask user what level of difficulty
+
+Link word to internet Mirriam-Webster definition
+
+Link word to picture
+
+Hot Streak Verbal and/or fun kids gif (dancing kid or cartoon) after 5 in row, 10 in row, explicit
+Your on fire!, En fuego, Super Nova! (w gif)
+
+Keep log of scores; 
+  By Time and difficulty, notate user
+  SIMULATE Mrs. COGDILL 4th GRADE Multiplication Tables!!!  Top 10 Hall of Fame
+
+  Gamify it.  They can "Level-Up" or go through belts, like yellow belt up to Master Black Belt
+
+timer?
+HOF (Hall of Fame) 1st by accuracy, after 100% then by fastest time
+
+
+
+NOTES
+
+# do...until Loops until the condition is TRUE
+
+# Module 8/ Lesson 2 - other loops
+
+#FOR loop after 3 incorrect attempts instead of Break or CONTINUE
+# Break loop w CONTINUE, so if they give up
