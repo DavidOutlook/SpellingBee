@@ -17,6 +17,9 @@ Score: Show % of correctly spelled words on 1st attempt
 
 ADVANCED Features
 
+Add Switch to choose Easy, Medium, I Love a Challenge!
+Jimmy's MathBuddy Line 36, or Nate's switch on GitHub
+
 Ask user how many words they would like to spell.. ex 10,20,50 and then pull that many from get-content of 1 large file
 Conversely, Break Word chunks by difficulty or mix easy, medium, hard
 ask user what level of difficulty

@@ -7,6 +7,6 @@ Purpose's
 
 Hopefully
 
-* Collaborate with teammate to learn GitHub fork, pull, merge, etc
+* Collaborate with teammate(s) to learn GitHub fork, pull, merge, etc
 
 Optional: Make it super fun :) and engaging
