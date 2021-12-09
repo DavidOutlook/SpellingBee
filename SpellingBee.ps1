@@ -9,6 +9,11 @@ $name = Read-Host "Hello, what is your name?"
 new-speech "Nice to meet you $name, let's spell some words together!"
 
 $list = Get-Content -Path .\SampleWords.txt
+# Get-Content retrieves content from a text file, and then stored in an array; each line in the text file is an item in the arrary
+# Limit the data retrieved by using parameters
+# -TotalCount   how many lines from the beginning of a file
+# -Tail         how many lines from the END of a file
+# ex Get-Content C:\Scripts\computers.txt -TotalCount 10
 
 #For Each loop
 #Lessons Learned; had to add new VARIABLE $userinput to be able to compare if -match
@@ -40,5 +45,9 @@ foreach ($word in $list)
             Write-Host "Try Again!"
     }
 }
-    
                         }
+
+    
+    # unsure how to display "Finished!" prompt after ForEach loop is done (run out of words from wordlist Line 11)
+    
+    

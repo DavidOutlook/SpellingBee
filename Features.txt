@@ -39,7 +39,7 @@ Keep log of scores;
 timer?
 HOF (Hall of Fame) 1st by accuracy, after 100% then by fastest time
 
-
+#$random = Get-Content -Path .\whereeveryorestoringthewords | Sort-Object {Get-Random} -unique | select -# ?
 
 NOTES
 
