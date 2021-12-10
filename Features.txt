@@ -2,17 +2,27 @@ Original idea - Dec 8 2021 @ 4am, Spelling Bee Flashcards, using SpeechSynth
 
 Additional Features
 
+A - from "Proof of Concept" to Actual Word List
 
-After 3 incorrect attempts, Write-host the correct spelling and BREAK or CONTINUE loop
+A - 
+Save word list in pages that correlate to physical pages
 
-Option to repeat the word
+repeat the word - press Spacebar
 Automatically repeat word if $false
 
-When loop finished, say and write "Great Practice!  Thanks for spelling with me $name"
+Dictionary link to https://www.merriam-webster.com/ - using existing script to enter on website
+Store that script as a function; save in same Module as SpeechSynthModule
+Triggered by user pressing "ENTER"
 
-Show words at end that were not spelled correctly on 1st attempt for extra Practice
+B - 
+Log - Show words at end that were not spelled correctly on 1st attempt for extra Practice
 
-Score: Show % of correctly spelled words on 1st attempt
+
+C - 
+
+After 3 incorrect attempts, Write-host the correct spelling and wait for correct input
+
+Metrics - Score: Show % of correctly spelled words on 1st attempt
 
 
 ADVANCED Features

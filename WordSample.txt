@@ -1,3 +1,2 @@
-cat
-dog
-fish
+go
+kid
