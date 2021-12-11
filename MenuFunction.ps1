@@ -1,4 +1,4 @@
-# Speech Synthesizer
+# function https://www.business.com/articles/powershell-interactive-menu/
 
 <#
 .Synopsis
@@ -10,26 +10,6 @@
 .EXAMPLE
    Another example of how to use this cmdlet
 #>
-function new-speech {
-   
-    Param
-    (
-        [Parameter(Mandatory = $true, 
-            ValueFromPipeline = $true)]
-        [string]$text
-    )
-
-    #set up .net object for use
-    Add-Type -AssemblyName System.Speech 
-    $synth = New-Object -TypeName System.Speech.Synthesis.SpeechSynthesizer
-    
-    #Write-Host $text
-    $synth.speak($text)
- 
-}
-
-#new-speech -text "This is a test"
-
 function Show-Menu 
 {
    [CmdletBinding()]
@@ -58,4 +38,8 @@ function Show-Menu
     Write-Host "                                  "
     Write-Host "X. Exit this menu                 "
     Write-Host "                                  "
+    Read-host "testing"
 }
+
+# modified from Nate's script
+

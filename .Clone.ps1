@@ -8,7 +8,41 @@ new-speech "Hello, what is your name?"
 $name = Read-Host "Hello, what is your name?" 
 new-speech "Nice to meet you $name, let's spell some words together!"
 
+# Add MENU
+# https://www.business.com/articles/powershell-interactive-menu/
+
+     Show-Menu
+     $Menu = Read-Host "Please make a selection"
+     switch ($input)
+     {
+           '1' {
+                cls
+                'You chose option #1'
+                $list = Get-Content -Path .\WordSample.txt
+           } '2' {
+                cls
+                'You chose option #2'
+                $list9 = Get-Content -Path .\WordList9.txt
+           } '3' {
+                cls
+                'You chose option #3'
+           } 'q' {
+                return
+           }
+     }
+     pause
+
+$Menu = @(
+     "$list",  
+     "$list9"
+)
+
 $list = Get-Content -Path .\WordSample.txt
+#$list1 = Get-Content -Path .\WordList1.txt
+#$list2 = Get-Content -Path .\WordList2.txt
+#$list3 = Get-Content -Path .\WordList3.txt
+$list9 = Get-Content -path .\wordlist9.txt
+
 # Get-Content retrieves content from a text file, and then stored in an array; each line in the text file is an item in the arrary
 # Limit the data retrieved by using parameters
 # -TotalCount   how many lines from the beginning of a file
@@ -18,9 +52,8 @@ $list = Get-Content -Path .\WordSample.txt
 #For Each loop
 #Lessons Learned; had to add new VARIABLE $userinput to be able to compare if -match
 
-foreach ($word in $list) 
+foreach ($word in $Menu) 
 {
-
     new-speech $word 
 
     # Keeps on looping this until BREAK is called
