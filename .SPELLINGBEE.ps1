@@ -16,7 +16,7 @@ $list = Get-Content -Path .\WordSample.txt
 # ex Get-Content C:\Scripts\computers.txt -TotalCount 10
 
 #For Each loop
-#Lessons Learned; had to add new VARIABLE $userinput to be able to compare if -match
+#Lessons Learned; had to add new VARIABLE $userinput to be able to compare if -eq
 
 foreach ($word in $list) 
 {
@@ -32,8 +32,7 @@ foreach ($word in $list)
         # Prompt user for input
         $userinput = Read-host -Prompt "Type the spelling of the word here"  # added variable $userinput
 
-        # Check whether it matches; unsure if to use -match or -eq
-        if ($userinput -match $word) 
+        if ($userinput -eq $word) 
         {
             # If correct, call break to exit the WHILE loop and continud on the ForEach $word list
             Write-Host "Correct!"
@@ -42,7 +41,7 @@ foreach ($word in $list)
         else 
             {
             # If incorrect, display Try Again and then restarts the loop with the prompt
-            Write-Host "Try Again!"
+            Write-Host "Try Again!  Practice makes us better.  You CAN do it $name!" -ForegroundColor Black -BackgroundColor Yellow
     }
 }
            }

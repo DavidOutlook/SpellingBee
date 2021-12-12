@@ -38,7 +38,6 @@ function Show-Menu
     Write-Host "                                  "
     Write-Host "X. Exit this menu                 "
     Write-Host "                                  "
-    Read-host "testing"
 }
 
 # modified from Nate's script

@@ -1,5 +1,4 @@
 # Kanban Board created in GitKraken
-
 # Load function "new-speech" for audible
 Import-Module -Name .\SpeechSynthModule.psm1
 
@@ -8,40 +7,9 @@ new-speech "Hello, what is your name?"
 $name = Read-Host "Hello, what is your name?" 
 new-speech "Nice to meet you $name, let's spell some words together!"
 
-# Add MENU
-# https://www.business.com/articles/powershell-interactive-menu/
-
-     Show-Menu
-     $Menu = Read-Host "Please make a selection"
-     switch ($input)
-     {
-           '1' {
-                cls
-                'You chose option #1'
-                $list = Get-Content -Path .\WordSample.txt
-           } '2' {
-                cls
-                'You chose option #2'
-                $list9 = Get-Content -Path .\WordList9.txt
-           } '3' {
-                cls
-                'You chose option #3'
-           } 'q' {
-                return
-           }
-     }
-     pause
-
-$Menu = @(
-     "$list",  
-     "$list9"
-)
-
-$list = Get-Content -Path .\WordSample.txt
-#$list1 = Get-Content -Path .\WordList1.txt
-#$list2 = Get-Content -Path .\WordList2.txt
-#$list3 = Get-Content -Path .\WordList3.txt
-$list9 = Get-Content -path .\wordlist9.txt
+# Loop is running the bottom line, not both.  Interesting to read the bottom and not top?
+$list = Get-Content -Path .\WordList1.txt -Tail 35
+$list = Get-Content -Path .\WordList1.txt -TotalCount 3
 
 # Get-Content retrieves content from a text file, and then stored in an array; each line in the text file is an item in the arrary
 # Limit the data retrieved by using parameters
@@ -52,10 +20,12 @@ $list9 = Get-Content -path .\wordlist9.txt
 #For Each loop
 #Lessons Learned; had to add new VARIABLE $userinput to be able to compare if -eq
 
-foreach ($word in $Menu) 
+foreach ($word in $list) 
 {
-    new-speech $word 
 
+    # new-speech $word 
+    1..3 | ForEach-Object { new-speech $word }
+ 
     # Keeps on looping this until BREAK is called
     # Technically could also do a DO WHILE or DO UNTIL loop but prefer the explicit BREAK
     # Personal preference
