@@ -3,20 +3,13 @@
 # Load function "new-speech" for audible
 Import-Module -Name .\SpeechSynthModule.psm1
 
-# Ask user for input
+# Ask user for name
 new-speech "Hello, what is your name?" 
 $name = Read-Host "Hello, what is your name?" 
 new-speech "Nice to meet you $name, let's spell some words together!"
 
 $list = Get-Content -Path .\WordSample.txt
-# Get-Content retrieves content from a text file, and then stored in an array; each line in the text file is an item in the arrary
-# Limit the data retrieved by using parameters
-# -TotalCount   how many lines from the beginning of a file
-# -Tail         how many lines from the END of a file
-# ex Get-Content C:\Scripts\computers.txt -TotalCount 10
 
-#For Each loop
-#Lessons Learned; had to add new VARIABLE $userinput to be able to compare if -eq
 
 foreach ($word in $list) 
 {
@@ -31,7 +24,6 @@ foreach ($word in $list)
     
         # Prompt user for input
         $userinput = Read-host -Prompt "Type the spelling of the word here"  # added variable $userinput
-
         if ($userinput -eq $word) 
         {
             # If correct, call break to exit the WHILE loop and continud on the ForEach $word list
