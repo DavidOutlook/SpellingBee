@@ -13,8 +13,8 @@ $name = [Microsoft.VisualBasic.Interaction]::InputBox('Enter your name','Your Na
 new-speech "Nice to meet you $name, let's spell some words together!"
 
 # Loop is running the bottom line, not both.  Interesting to read the bottom and not top?
-$list = Get-Content -Path .\WordList1.txt -Tail 35
-$list = Get-Content -Path .\WordList1.txt -TotalCount 2
+$list = Get-Content -Path .\WordList1.txt -Tail 70
+#$list = Get-Content -Path .\WordList1.txt -TotalCount 2
 
 Start-sleep -Milliseconds 200
 
