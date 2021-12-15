@@ -16,7 +16,7 @@ new-speech "Nice to meet you $name, let's spell some words together!"
 $list = Get-Content -Path .\WordList1.txt -TotalCount 70
 $list = Get-Content -Path .\WordList1.txt -Tail 70
 $list = Get-Content -Path .\WordList2.txt -TotalCount 87  #16 minutes
-$list = Get-Content -Path .\WordList2.txt -Tail 90
+$list = Get-Content -Path .\WordList2.txt -Tail 90 
 # $list = Get-Content -Path .\WordList3.txt -TotalCount 90
 # $list = Get-Content -Path .\WordList3.txt -Tail 65
 
@@ -60,7 +60,7 @@ new-speech "All done $name, thanks, I had fun spelling with you!"
 Start-Sleep -Seconds 1
 new-speech "Goodbye $name!"
 
-$list | Out-GridView
+$list | Out-GridView -Title "Spelling Words - Great Job $name!"
 
 read-Host
 # Start-Sleep -Seconds 60
