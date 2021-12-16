@@ -20,6 +20,8 @@ $list = Get-Content -Path .\WordList2.txt -Tail 90          #17 minutes
 $list = Get-Content -Path .\WordList3.txt -TotalCount 90
 # $list = Get-Content -Path .\WordList3.txt -Tail 65
 
+Start-Process https://www.merriam-webster.com/saved-words
+Start-Process https://www.merriam-webster.com/
 
 Start-sleep -Milliseconds 200
 
