@@ -15,9 +15,9 @@ new-speech "Nice to meet you $name, let's spell some words together!"
 # Loop is running the bottom line ONLY.  Interesting to read the bottom and not top?
 $list = Get-Content -Path .\WordList1.txt -TotalCount 70
 $list = Get-Content -Path .\WordList1.txt -Tail 70
-$list = Get-Content -Path .\WordList2.txt -TotalCount 87  #16 minutes
-$list = Get-Content -Path .\WordList2.txt -Tail 90 
-# $list = Get-Content -Path .\WordList3.txt -TotalCount 90
+$list = Get-Content -Path .\WordList2.txt -TotalCount 87    #16 minutes
+$list = Get-Content -Path .\WordList2.txt -Tail 90          #17 minutes
+$list = Get-Content -Path .\WordList3.txt -TotalCount 90
 # $list = Get-Content -Path .\WordList3.txt -Tail 65
 
 
