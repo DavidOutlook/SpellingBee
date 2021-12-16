@@ -135,7 +135,7 @@ feline
 bustling
 scrolls
 detect
-smores
+s'mores
 drone
 playlist
 squabbling
