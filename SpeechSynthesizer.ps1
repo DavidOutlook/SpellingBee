@@ -22,6 +22,9 @@ function new-speech {
     Add-Type -AssemblyName System.Speech 
     $synth = New-Object -TypeName System.Speech.Synthesis.SpeechSynthesizer
     
+    # change voice
+# $synth.SelectVoice('Microsoft Hazel Desktop')
+
     #Write-Host $text
     $synth.speak($text)
  
