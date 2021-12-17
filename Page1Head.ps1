@@ -8,7 +8,7 @@ new-speech "Hello, what is your name?"
 
 # create the graphical input box
 [void][System.Reflection.Assembly]::LoadWithPartialName('Microsoft.VisualBasic')
-$name = [Microsoft.VisualBasic.Interaction]::InputBox('Enter your name','Your Name','Luke')
+$name = [Microsoft.VisualBasic.Interaction]::InputBox('Enter your name', 'Your Name', 'Luke')
 
 new-speech "Nice to meet you $name, let's spell some words together!"
 
@@ -17,7 +17,7 @@ $list = Get-Content -Path .\WordList1.txt -TotalCount 70
 $list = Get-Content -Path .\WordList1.txt -Tail 70
 $list = Get-Content -Path .\WordList2.txt -TotalCount 87    #16 minutes
 $list = Get-Content -Path .\WordList2.txt -Tail 90          #17 minutes
-$list = Get-Content -Path .\WordList3.txt -TotalCount 90
+$list = Get-Content -Path .\WordList3.txt -TotalCount 1 #90
 # $list = Get-Content -Path .\WordList3.txt -Tail 65
 
 Start-Process https://www.merriam-webster.com/saved-words
@@ -29,34 +29,29 @@ Start-sleep -Milliseconds 200
 # Measure-Command -Expression {    # can't use | Select-Object Seconds
 Measure-Command {
     
+    foreach ($word in $list) {
+        # new-speech $word 
+        1..2 | ForEach-Object { new-speech $word }
+        # how to run repeat the word.  If user presses a key (ex. up arrow) then new-speech $word
 
-foreach ($word in $list) 
-{
-    # new-speech $word 
-    1..2 | ForEach-Object { new-speech $word }
-    # how to run repeat the word.  If user presses a key (ex. up arrow) then new-speech $word
+        # Keeps on looping this until BREAK is called
+        while ($true) {
+            # Prompt user for input
 
-    # Keeps on looping this until BREAK is called
-    while ($true) 
-    {
-        # Prompt user for input
+            $userinput = Read-host -Prompt "Spell here"  # added variable $userinput
 
-        $userinput = Read-host -Prompt "Spell here"  # added variable $userinput
-
-        if ($userinput -eq $word) 
-        {
-            # If correct, call break to exit the WHILE loop and continud on the ForEach $word list
-            Write-Host "Correct!"
-            BREAK
+            if ($userinput -eq $word) {
+                # If correct, call break to exit the WHILE loop and continud on the ForEach $word list
+                Write-Host "Correct!"
+                BREAK
+            }
+            else {
+                # If incorrect, display Try Again and then restarts the loop with the prompt
+                Write-Host "Try Again!  Practice makes us better.  You CAN do it $name!" -ForegroundColor Black -BackgroundColor Yellow
+            }
         }
-        else 
-            {
-            # If incorrect, display Try Again and then restarts the loop with the prompt
-            Write-Host "Try Again!  Practice makes us better.  You CAN do it $name!" -ForegroundColor Black -BackgroundColor Yellow
-    }
-}
-            }  
-        }      # Measure-Command Line 24
+    }  
+}      # Measure-Command Bracket
 
 new-speech "All done $name, thanks, I had fun spelling with you!"
 Start-Sleep -Seconds 1
