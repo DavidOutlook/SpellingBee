@@ -21,7 +21,7 @@ $list = Get-Content -Path .\WordList3.txt -TotalCount 1 #90
 # $list = Get-Content -Path .\WordList3.txt -Tail 65
 
 Start-Process https://www.merriam-webster.com/saved-words
-Start-Process https://www.merriam-webster.com/
+Start-Process https://www.merriam-webster.com/ 
 
 Start-sleep -Milliseconds 200
 
