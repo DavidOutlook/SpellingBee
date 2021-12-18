@@ -10,6 +10,10 @@
 .EXAMPLE
    Another example of how to use this cmdlet
 #>
+
+# MODIFIED from Nate's script.  
+#TODO Use GUI MENU instead?
+
 function Show-Menu 
 {
    [CmdletBinding()]
@@ -40,5 +44,4 @@ function Show-Menu
     Write-Host "                                  "
 }
 
-# modified from Nate's script
 

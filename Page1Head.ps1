@@ -19,6 +19,9 @@ $list = Get-Content -Path .\WordList2.txt -TotalCount 87    #16 minutes
 $list = Get-Content -Path .\WordList2.txt -Tail 90          #17 minutes
 $list = Get-Content -Path .\WordList3.txt -TotalCount 1 #90
 # $list = Get-Content -Path .\WordList3.txt -Tail 65
+# TODO Import GUI Menu for user to choose list; sample menu in file MenuFunction.ps1
+# TODO Menu GUI is in MSSA repo; move over and tinker with using sample menu
+# TODO is this a SWITCH or HASH TABLE to map user selection to file???
 
 Start-Process https://www.merriam-webster.com/saved-words
 Start-Process https://www.merriam-webster.com/ 
@@ -28,7 +31,8 @@ Start-sleep -Milliseconds 200
 # just show Minutes and Seconds?
 # Measure-Command -Expression {    # can't use | Select-Object Seconds
 Measure-Command {
-    
+    # FIXME only display time output in MINUTES and SECONDS... Use .NET Stopwatch.ps1 insted of Measure-Command???
+
     foreach ($word in $list) {
         # new-speech $word 
         1..2 | ForEach-Object { new-speech $word }
