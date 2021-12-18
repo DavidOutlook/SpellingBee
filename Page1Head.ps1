@@ -1,6 +1,6 @@
 # Kanban Board created in GitKraken
 # Load function "new-speech" for audible
-Import-Module -Name .\SpeechSynthModule.psm1
+Import-Module -Name .\Speech\SpeechSynthModule.psm1
 
 # Ask user for name
 new-speech "Hello, what is your name?" 
@@ -13,15 +13,16 @@ $name = [Microsoft.VisualBasic.Interaction]::InputBox('Enter your name', 'Your N
 new-speech "Nice to meet you $name, let's spell some words together!"
 
 # Loop is running the bottom line ONLY.  Interesting to read the bottom and not top?
-$list = Get-Content -Path .\WordList1.txt -TotalCount 70
-$list = Get-Content -Path .\WordList1.txt -Tail 70
-$list = Get-Content -Path .\WordList2.txt -TotalCount 87    #16 minutes
-$list = Get-Content -Path .\WordList2.txt -Tail 90          #17 minutes
-$list = Get-Content -Path .\WordList3.txt -TotalCount 1 #90
+#$list = Get-Content -Path .\WordList1.txt -TotalCount 70
+#$list = Get-Content -Path .\WordList1.txt -Tail 70
+#$list = Get-Content -Path .\WordList2.txt -TotalCount 87    #16 minutes
+#$list = Get-Content -Path .\WordList2.txt -Tail 90          #17 minutes
+#$list = Get-Content -Path .\WordList3.txt -TotalCount 90
 # $list = Get-Content -Path .\WordList3.txt -Tail 65
 # TODO Import GUI Menu for user to choose list; sample menu in file MenuFunction.ps1
 # TODO Menu GUI is in MSSA repo; move over and tinker with using sample menu
 # TODO is this a SWITCH or HASH TABLE to map user selection to file???
+
 
 Start-Process https://www.merriam-webster.com/saved-words
 Start-Process https://www.merriam-webster.com/ 

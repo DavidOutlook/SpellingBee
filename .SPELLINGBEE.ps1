@@ -1,5 +1,4 @@
 # Kanban Board created in GitKraken
-
 # Load function "new-speech" for audible
 Import-Module -Name .\SpeechSynthModule.psm1
 
