@@ -24,7 +24,6 @@ car
 rage
 gift
 very
-
 last
 well
 mess
@@ -51,7 +50,6 @@ feet
 must
 turning
 wanted
-
 sprung
 zoomed
 large
@@ -78,7 +76,6 @@ knife
 place
 oil
 gushed
-
 china
 stopped
 also
@@ -105,7 +102,6 @@ found
 gloves
 pretty
 baskets
-
 bonnet
 rodeo
 salad
@@ -132,7 +128,6 @@ whiskers
 condition
 slumped
 blurted
-
 wallet
 focus
 circus

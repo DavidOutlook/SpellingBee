@@ -19,10 +19,17 @@ new-speech "Nice to meet you $name, let's spell some words together!"
 #$list = Get-Content -Path .\WordList2.txt -Tail 90          #17 minutes
 #$list = Get-Content -Path .\WordList3.txt -TotalCount 90
 # $list = Get-Content -Path .\WordList3.txt -Tail 65
+
+# District Lists
+$list = Get-Content -Path .\WordLists\District1.txt -TotalCount 75
+#$list = Get-Content -Path .\WordLists\District1.txt -Tail 75
+#$list = Get-Content -Path .\WordLists\District1.txt -TotalCount 75
+#$list = Get-Content -Path .\WordLists\District1.txt -Tail 75
+
+
 # TODO Import GUI Menu for user to choose list; sample menu in file MenuFunction.ps1
 # TODO Menu GUI is in MSSA repo; move over and tinker with using sample menu
-# TODO is this a SWITCH or HASH TABLE to map user selection to file???
-
+# TODO is this a SWITCH or HASH TABLE to map user selection to file???#$list = Get-Content -Path .\WordList1.txt -TotalCount 70
 
 Start-Process https://www.merriam-webster.com/saved-words
 Start-Process https://www.merriam-webster.com/ 
