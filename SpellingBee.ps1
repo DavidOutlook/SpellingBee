@@ -3,7 +3,7 @@
 Import-Module -Name .\Speech\SpeechSynthModule.psm1
 
 # Ask user for name
-new-speech "Hello, what is your name?" 
+new-speech 'Hello, what is your name?' 
 # $name = Read-Host "Hello, what is your name?" # read-host can be replaced by nicer GUI box, but doesn't test in VSC
 
 # create the graphical input box
@@ -23,9 +23,9 @@ new-speech "Nice to meet you $name, let's spell some words together!"
 # District Lists
 $list = Get-Content -Path .\WordLists\District1.txt -TotalCount 75  #11 minutes
 $list = Get-Content -Path .\WordLists\District1.txt -Tail 75        #12 minutes
-$list = Get-Content -Path .\WordLists\District2.txt -TotalCount 101
-#$list = Get-Content -Path .\WordLists\District2.txt -Tail 101
-#$list = Get-Content -Path .\WordLists\District3.txt -TotalCount 101  # minutes
+$list = Get-Content -Path .\WordLists\District2.txt -TotalCount 101 #18 minutes, last word gimmick
+$list = Get-Content -Path .\WordLists\District2.txt -Tail 101       #18 minutes
+$list = Get-Content -Path .\WordLists\District3.txt -TotalCount 101  # minutes
 #$list = Get-Content -Path .\WordLists\District3.txt -Tail 101        # minutes
 #$list = Get-Content -Path .\WordLists\District4.txt -TotalCount 102  # minutes
 #$list = Get-Content -Path .\WordLists\District4.txt -Tail 102        # minutes
@@ -36,7 +36,7 @@ $list = Get-Content -Path .\WordLists\District2.txt -TotalCount 101
 
 Start-Process https://www.merriam-webster.com/ 
 
-Start-sleep -Milliseconds 200
+Start-Sleep -Milliseconds 200
 
 # just show Minutes and Seconds?
 # Measure-Command -Expression {    # can't use | Select-Object Seconds
@@ -52,14 +52,13 @@ Measure-Command {
         while ($true) {
             # Prompt user for input
 
-            $userinput = Read-host -Prompt "Spell here"  # added variable $userinput
+            $userinput = Read-Host -Prompt 'Spell here'  # added variable $userinput
 
             if ($userinput -eq $word) {
                 # If correct, call break to exit the WHILE loop and continud on the ForEach $word list
-                Write-Host "Correct!"
+                Write-Host 'Correct!'
                 BREAK
-            }
-            else {
+            } else {
                 # If incorrect, display Try Again and then restarts the loop with the prompt
                 Write-Host "Try Again!  Practice makes us better.  You CAN do it $name!" -ForegroundColor Black -BackgroundColor Yellow
             }
@@ -73,7 +72,7 @@ new-speech "Goodbye $name!"
 
 $list | Out-GridView -Title "Spelling Words - Great Job $name!"
 
-read-Host
+Read-Host
 # Start-Sleep -Seconds 60
 
 # PowerShell won't close with the typical "Enter" key, but clicking X window still closes immediately
