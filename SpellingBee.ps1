@@ -37,8 +37,9 @@ $list = Get-Content -Path .\WordLists\DistrictTwoBee8.txt -Tail 75   #15
 #below .txt was formatted oddly.  1st and last columns normal. Columns 2-5 are horizontal
 $list = Get-Content -Path .\WordLists\DistrictTwoBee9.txt -TotalCount 100 #40 w breaks 
 $list = Get-Content -Path .\WordLists\DistrictTwoBee9.txt -Tail 100   
-$list = Get-Content -Path .\WordLists\DistrictTwoBee10.txt -TotalCount 102 #
-#$list = Get-Content -Path .\WordLists\DistrictTwoBee10.txt -Tail 102   
+$list = Get-Content -Path .\WordLists\DistrictTwoBee10.txt -TotalCount 102 #32 minutes, getting tough
+$list = Get-Content -Path .\WordLists\DistrictTwoBee10.txt -Tail 102   #20
+#try again, without the word list
 
 # TODO Import GUI Menu for user to choose list; sample menu in file MenuFunction.ps1
 # TODO Menu GUI is in MSSA repo; move over and tinker with using sample menu
