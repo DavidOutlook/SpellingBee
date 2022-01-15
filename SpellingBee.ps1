@@ -32,13 +32,13 @@ $list = Get-Content -Path .\WordLists\District4.txt -Tail 102        #21 minutes
 $list = Get-Content -Path .\WordLists\District5.txt                  # minutes only 67 words
 
 # District TWO Bee; file names correspond with PDF page #
-$list = Get-Content -Path .\WordLists\DistrictTwoBee8.txt -TotalCount 75  #17
+$list = Get-Content -Path .\WordLists\DistrictTwoBee8.txt -TotalCount 75  #17, 21 w/o list
 $list = Get-Content -Path .\WordLists\DistrictTwoBee8.txt -Tail 75   #15
 #below .txt was formatted oddly.  1st and last columns normal. Columns 2-5 are horizontal
-$list = Get-Content -Path .\WordLists\DistrictTwoBee9.txt -TotalCount 100 #40 w breaks 
-$list = Get-Content -Path .\WordLists\DistrictTwoBee9.txt -Tail 100   
-$list = Get-Content -Path .\WordLists\DistrictTwoBee10.txt -TotalCount 102 #32 minutes, getting tough
-$list = Get-Content -Path .\WordLists\DistrictTwoBee10.txt -Tail 102   #20
+#$list = Get-Content -Path .\WordLists\DistrictTwoBee9.txt -TotalCount 100 #40 w breaks 
+#$list = Get-Content -Path .\WordLists\DistrictTwoBee9.txt -Tail 100   
+#$list = Get-Content -Path .\WordLists\DistrictTwoBee10.txt -TotalCount 102 #32 minutes, getting tough
+#$list = Get-Content -Path .\WordLists\DistrictTwoBee10.txt -Tail 102   #20
 #try again, without the word list
 
 # TODO Import GUI Menu for user to choose list; sample menu in file MenuFunction.ps1
@@ -72,6 +72,7 @@ Measure-Command {
             } else {
                 # If incorrect, display Try Again and then restarts the loop with the prompt
                 Write-Host "Try Again!  Practice makes us better.  You CAN do it $name!" -ForegroundColor Black -BackgroundColor Yellow
+                1..2 | ForEach-Object { new-speech $word }
             }
         }
     }  
