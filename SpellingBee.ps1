@@ -21,25 +21,27 @@ new-speech "Nice to meet you $name, let's spell some words together!"
 # $list = Get-Content -Path .\WordList3.txt -Tail 65
 
 # District Lists, District1-5 are Difficulty ONE Bee
-$list = Get-Content -Path .\WordLists\District1.txt -TotalCount 75  #11 minutes
-$list = Get-Content -Path .\WordLists\District1.txt -Tail 75        #12 minutes
-$list = Get-Content -Path .\WordLists\District2.txt -TotalCount 101 #18 minutes, last word gimmick
-$list = Get-Content -Path .\WordLists\District2.txt -Tail 101       #18 minutes
-$list = Get-Content -Path .\WordLists\District3.txt -TotalCount 101  #19 minutes
-$list = Get-Content -Path .\WordLists\District3.txt -Tail 101        #19 minutes
-$list = Get-Content -Path .\WordLists\District4.txt -TotalCount 102  #24 minutes, 
-$list = Get-Content -Path .\WordLists\District4.txt -Tail 102        #21 minutes
-$list = Get-Content -Path .\WordLists\District5.txt                  # minutes only 67 words
+$list = Get-Content -Path .\WordLists\District1.txt -TotalCount 75  #18 minutes, ACED
+$list = Get-Content -Path .\WordLists\District1.txt -Tail 75        #12 minutes, ACED
+$list = Get-Content -Path .\WordLists\District2.txt -TotalCount 101 #18 minutes, 90%, missed 10
+#$list = Get-Content -Path .\WordLists\District2.txt -Tail 101       #18 minutes
+#$list = Get-Content -Path .\WordLists\District3.txt -TotalCount 101  #19 minutes
+#$list = Get-Content -Path .\WordLists\District3.txt -Tail 101        #19 minutes
+#$list = Get-Content -Path .\WordLists\District4.txt -TotalCount 102  #24 minutes, 
+#$list = Get-Content -Path .\WordLists\District4.txt -Tail 102        #21 minutes
+#$list = Get-Content -Path .\WordLists\District5.txt                  # minutes only 67 words
 
 # District TWO Bee; file names correspond with PDF page #
-$list = Get-Content -Path .\WordLists\DistrictTwoBee8.txt -TotalCount 75  #17, 21 w/o list
-$list = Get-Content -Path .\WordLists\DistrictTwoBee8.txt -Tail 75   #15
+#$list = Get-Content -Path .\WordLists\DistrictTwoBee8.txt -TotalCount 75  #17, 21 w/o list
+#$list = Get-Content -Path .\WordLists\DistrictTwoBee8.txt -Tail 75   #15
 #below .txt was formatted oddly.  1st and last columns normal. Columns 2-5 are horizontal
-#$list = Get-Content -Path .\WordLists\DistrictTwoBee9.txt -TotalCount 100 #40 w breaks 
+#$list = Get-Content -Path .\WordLists\DistrictTwoBee9.txt -TotalCount 100 #18 mins clean w/o aid after multiple attempts
 #$list = Get-Content -Path .\WordLists\DistrictTwoBee9.txt -Tail 100   
 #$list = Get-Content -Path .\WordLists\DistrictTwoBee10.txt -TotalCount 102 #32 minutes, getting tough
 #$list = Get-Content -Path .\WordLists\DistrictTwoBee10.txt -Tail 102   #20
 #try again, without the word list
+
+#$list = Get-Content -Path .\WordLists\DistrictExtraPractice.txt                
 
 # TODO Import GUI Menu for user to choose list; sample menu in file MenuFunction.ps1
 # TODO Menu GUI is in MSSA repo; move over and tinker with using sample menu
