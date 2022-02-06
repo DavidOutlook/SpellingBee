@@ -23,7 +23,7 @@ new-speech "Nice to meet you $name, let's spell some words together!"
 # District Lists, District1-5 are Difficulty ONE Bee
 $list = Get-Content -Path .\WordLists\District1.txt -TotalCount 75  #18 minutes, ACED
 $list = Get-Content -Path .\WordLists\District1.txt -Tail 75        #12 minutes, ACED
-$list = Get-Content -Path .\WordLists\District2.txt -TotalCount 101 #18 minutes, 90%, missed 10
+$list = Get-Content -Path .\WordLists\District2.txt -TotalCount 2 #101, 2 is for demo purposes #18 minutes, 90%, missed 10
 #$list = Get-Content -Path .\WordLists\District2.txt -Tail 101       #18 minutes
 #$list = Get-Content -Path .\WordLists\District3.txt -TotalCount 101  #19 minutes
 #$list = Get-Content -Path .\WordLists\District3.txt -Tail 101        #19 minutes
